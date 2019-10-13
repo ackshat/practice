@@ -6,7 +6,11 @@ public class ProducerConsumerUsingBlockingQueue{
     Produer producer = new Producer(q);
     Consumer consumer = new Consumer(q);
     
+    Thread t1 = new Thread(producer);
+    Thread t2 = new Thread(consumer);
     
+    t1.start();
+    t2.start();
   }
     
 
