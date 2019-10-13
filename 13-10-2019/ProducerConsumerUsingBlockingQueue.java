@@ -1,9 +1,13 @@
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
 public class ProducerConsumerUsingBlockingQueue{
   
   public static void main(String[] args){
     
-    BlockingQueue q = nwe BlockingQueue();
-    Produer producer = new Producer(q);
+    BlockingQueue q = new LinkedBlockingQueue();
+    Producer producer = new Producer(q);
     Consumer consumer = new Consumer(q);
     
     Thread t1 = new Thread(producer);
